@@ -1,4 +1,7 @@
 import './globals.css'
+import Navbar from './components/NavBar/navbar'
+import Footer from './footer/footer'
+
 
 export default function RootLayout({
   children,
@@ -12,7 +15,11 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body className="bg-[url('/Rectangle.svg')]">
+        <Navbar/>
+        {children}
+        <Footer/>
+        </body>
     </html>
   )
 }
